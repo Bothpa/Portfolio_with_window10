@@ -5,3 +5,158 @@
 .wdbi{
   background-image: url('../public/Images/Window_default_background_image.jpg');
 }
+
+/* 버튼 디자인 출처 */
+/* https://inpa.tistory.com/entry/CSS-%F0%9F%92%8D-%EB%B2%84%ED%8A%BC-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%AA%A8%EC%9D%8C */
+.btn-3d {
+  width: 105px;
+  height: 100px;
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  padding: 10px 10px;
+  color: white;
+  margin: 20px 10px 10px;
+  border-radius: 50%;
+  text-align: center;
+  transition: top .01s linear;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+.btn-3d:active {
+  top: 9px;
+}
+.btn-3d.color {
+  background-color: #B0B0B0; /* 회색으로 변경 */
+  box-shadow: 0 0 0 1px #A0A0A0 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 8px 0 0 rgba(160, 160, 160, .7),
+        0 8px 0 1px rgba(0,0,0,.4),
+        0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.color:active {
+  box-shadow: 0 0 0 1px #909090 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 0 0 1px rgba(0,0,0,0.4);
+}
+.btn-3d.color:hover {
+  background-color: #A9A9A9; /* 회색으로 변경 */
+}
+
+/* 로딩 애니메이션 출처 */
+/* https://funveloper.tistory.com/207 */
+.loading-icon {
+  /* variables */
+  --main-size: 40px;
+  --item-color: white;
+ 
+  width: var(--main-size);
+  height: var(--main-size);
+  display: inline-block;
+  position: relative;
+}
+.loading-icon > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-icon > div > div {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  --this-deg: 0deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-body-animation 5s linear 0ms infinite normal both;
+}
+.loading-icon > div > div > div {
+  width: 0;
+  height: 0;
+  --circle-width: calc(var(--main-size) / 7);
+  --circle-height: calc(var(--main-size) / 7);
+}
+.loading-icon > div > div > div > div {
+  width: var(--circle-width);
+  height: var(--circle-height);
+  display: block;
+  background-color: var(--item-color);
+  border-radius: calc(var(--main-size) * 10);
+  position: absolute;
+  top: calc(var(--circle-height) / -2);
+  left: calc(var(--circle-width) / -2);
+  transform: translateY(calc((var(--main-size) / -2) + calc(var(--circle-width) / 2)))
+}
+ 
+.loading-icon > div > div > div:nth-child(1) {
+  --this-deg: 0deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-animation 3s cubic-bezier(.17,.67,.45,.99) 500ms infinite normal both, loading-icon-div-opacity-animation 6s cubic-bezier(.17,.67,.45,.99) 700ms infinite normal both;
+}
+.loading-icon > div > div > div:nth-child(2) {
+  --this-deg: 30deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-animation 3s cubic-bezier(.17,.67,.45,.99) 440ms infinite normal both, loading-icon-div-opacity-animation 6s cubic-bezier(.17,.67,.45,.99) 580ms infinite normal both;
+}
+.loading-icon > div > div > div:nth-child(3) {
+  --this-deg: 60deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-animation 3s cubic-bezier(.17,.67,.45,.99) 360ms infinite normal both, loading-icon-div-opacity-animation 6s cubic-bezier(.17,.67,.45,.99) 450ms infinite normal both;
+}
+.loading-icon > div > div > div:nth-child(4) {
+  --this-deg: 90deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-animation 3s cubic-bezier(.17,.67,.45,.99) 260ms infinite normal both, loading-icon-div-opacity-animation 6s cubic-bezier(.17,.67,.45,.99) 310ms infinite normal both;
+}
+.loading-icon > div > div > div:nth-child(5) {
+  --this-deg: 120deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-animation 3s cubic-bezier(.17,.67,.45,.99) 140ms infinite normal both, loading-icon-div-opacity-animation 6s cubic-bezier(.17,.67,.45,.99) 160ms infinite normal both;
+}
+.loading-icon > div > div > div:nth-child(6) {
+  --this-deg: 150deg;
+  transform: rotate(var(--this-deg));
+  animation: loading-icon-div-animation 3s cubic-bezier(.17,.67,.45,.99) 0ms infinite normal both, loading-icon-div-opacity-animation 6s cubic-bezier(.17,.67,.45,.99) 0ms infinite normal both;
+}
+ 
+@keyframes loading-icon-div-body-animation {
+  0% {
+    transform: rotate(var(--this-deg));
+  } 
+  100% {
+    transform: rotate(calc(var(--this-deg) + 360deg));
+  }
+}
+@keyframes loading-icon-div-animation {
+  0% {
+    transform: rotate(var(--this-deg));
+  }
+  50% {
+    transform: rotate(calc(var(--this-deg) + 180deg));
+  }
+  100% {
+    transform: rotate(calc(var(--this-deg) + 360deg));
+  }
+}
+@keyframes loading-icon-div-opacity-animation {
+  0% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 0; 
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
