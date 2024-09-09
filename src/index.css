@@ -4,6 +4,7 @@
 
 .wdbi{
   background-image: url('../public/Images/Window_default_background_image.jpg');
+  background-size: cover;
 }
 
 .lbi{

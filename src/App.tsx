@@ -3,7 +3,7 @@ import TaskBar from "./TaskBar/TaskBar";
 
 const Booting = ({isBoot} : {isBoot:boolean}) => {
   return (
-      <div className={`${!isBoot && 'hidden'} fixed w-screen h-screen bg-black flex flex-col items-center justify-center`}>
+      <div className={`${!isBoot && 'hidden'} fixed w-screen h-screen bg-black flex flex-col items-center justify-center `}>
           <img src="/Images/Menu-Blue.png" className="w-[220px] h-[220px] mb-[500px]" alt="" />
           <div className="loading-icon">
               <div>
@@ -31,9 +31,9 @@ const Login = () => {
   , [])
 
   return (
-    <div className={`w-screen h-screen lbi flex justify-center items-center flex-col ${isLogin ? 'hidden' : ''}`}>
+    <div className={`w-screen h-screen lbi flex justify-center items-center flex-col z-[200] ${isLogin ? 'hidden' : ''}`}>
       <img src="/Images/User.png" alt="" className="z-[6] w-[210px] h-[210px] rounded-full mb-6"/>
-      <span className="font-bold text-3xl text-white mb-5">Administer</span>
+      <span className="font-bold text-3xl text-white mb-5">Administrator</span>
       <div className="flex items-center">
         <div className="loading-icon mr-2">
             <div>
@@ -91,7 +91,3 @@ const App = () => {
 }
 
 export default App;
-
-function sleep(arg0: number) {
-  throw new Error("Function not implemented.");
-}
