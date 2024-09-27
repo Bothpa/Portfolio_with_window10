@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 윈도우 바탕화면 */
 .wdbi{
   background-image: url('../public/Images/Window_default_background_image.jpg');
   background-size: cover;
 }
 
+/* 윈도우 로그인 바탕화면 */
 .lbi{
   background-image: url('../public/Images/Window_default_background_image2.jpg');
   background-size: cover;
@@ -29,6 +31,11 @@
   background-color: rgba(240, 240, 240, 0.1);
   backdrop-filter: blur(5px);
   z-index: -1;
+}
+
+/* 스크롤바 없애기 */
+body {
+  overflow: hidden;
 }
 
 input:focus{
