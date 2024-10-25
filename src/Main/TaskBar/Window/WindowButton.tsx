@@ -12,7 +12,7 @@ const WindowButton = () => {
 
     return (
         <>
-        <div ref={WindowButtonRef} className="h-full w-[43px] flex justify-center items-center hover:bg-[#393939]" onClick={handleClick}>
+        <div ref={WindowButtonRef} className="h-full w-[43px] flex justify-center items-center hover:bg-[#52595D70]" onClick={handleClick}>
             <img src="/Images/Menu-White.png" className="w-[17px] h-[17.5px] filter invert brightness-0" alt="윈도우 버튼" />
         </div>
         <WindowMenu isWindowMenu={isWindowMenu} setIsWindowMenu={setIsWindowMenu} WindowButtonRef={WindowButtonRef}/>

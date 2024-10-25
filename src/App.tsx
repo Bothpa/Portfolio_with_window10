@@ -3,7 +3,7 @@ import Booting from "./Booting/Booting";
 import Main from "./Main/Main";
 
 const App = () => {
-  const [isFullScreen, setFullScreen] = useState(true)
+  const [isFullScreen, setFullScreen] = useState(false)
   const [isBoot, setBoot] = useState(false)
 
   const toggleFullScreen = () => {
