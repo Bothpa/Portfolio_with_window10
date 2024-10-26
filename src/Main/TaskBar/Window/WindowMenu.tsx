@@ -25,8 +25,8 @@ const WindowMenu = ({ isWindowMenu, setIsWindowMenu, WindowButtonRef }: { isWind
 
     return (
         <div ref={menuRef} className={`${!isWindowMenu && 'hidden'} absolute bottom-[37px] left-0 w-[883px] h-[580px] bg-[#252525] flex bg-opacity-[0.94] backdrop-filter backdrop-blur-[6px]`}>
-            <div className='flex flex-col h-full w-[43px]'>
-                <MultipurposeButton image="User" other='mt-auto' otherIn='rounded-full'/>
+            <div className='flex flex-col h-full w-[46px]'>
+                <MultipurposeButton image="User" other='mt-auto' otherIn='rounded-full p-[12px]'/>
                 <MultipurposeButton image="File" />
                 <MultipurposeButton image="Image" />
                 <MultipurposeButton image="Setting" />

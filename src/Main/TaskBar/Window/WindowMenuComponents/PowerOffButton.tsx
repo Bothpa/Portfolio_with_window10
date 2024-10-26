@@ -55,7 +55,7 @@ const PowerOffButton = ({ isWindowMenu }: { isWindowMenu: boolean }) => {
 
     return (
         <div className='w-full h-fit relative' ref={PowerOffButtonRef}>
-            <img src="/Images/Power.png" alt="전원버튼" className='w-full p-1 hover:bg-[#52595D70]' onClick={handleClick} />
+            <img src="/Images/Power.png" alt="전원버튼" className='w-full p-1 taskhover' onClick={handleClick} />
             <PowerOffMenu PowerOffButtonRef={PowerOffButtonRef} isPowerOffMenu={isPowerOffMenu} setPowerOffMenu={setPowerOffMenu} />
         </div>
     );

@@ -20,8 +20,8 @@ const Clock = () => {
     });
 
     return (
-        <div className="flex flex-col h-full items-center justify-center text-white text-xs px-2 hover:bg-[#52595D70]">
-            <div>{formattedTime}</div>
+        <div className="flex flex-col h-full items-center justify-center text-white text-xs px-2 taskhover">
+            <div className="mb-[1px]">{formattedTime}</div>
             <div>{formattedDate}</div>
         </div>
     );
