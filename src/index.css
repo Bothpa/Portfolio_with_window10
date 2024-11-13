@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  user-select: none;
+}
+
 /* 윈도우 바탕화면 */
 .wdbi{
   background-image: url('../public/Images/Window_default_background_image.jpg');
@@ -40,6 +44,20 @@ body {
 
 input:focus{
   outline: none !important; /* !important를 사용하여 우선순위 설정 */
+}
+
+/* 스크롤바 스타일 */
+.custum-scrollbar::-webkit-scrollbar {
+  width: 2px; /* 스크롤바 너비를 4px로 설정 */
+}
+
+.custum-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888888; /* 스크롤바 막대기 색상 */
+  border-radius: 100px; /* 스크롤바 막대기 모서리를 둥글게 */
+}
+
+.custum-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* 스크롤바 트랙 배경을 투명하게 */
 }
 
 .search::placeholder {

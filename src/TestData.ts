@@ -1,0 +1,28 @@
+export const ListData = [
+    {img: 'Github',text: 'GitHub'},
+    {img: 'Pdf', text: 'Document.pdf'},
+    {img: 'Zip', text: 'DieBot.zip'},
+    {img: 'Video', text: 'Video.mp4'},
+    {img: 'Calculator', text: 'Calculator'},
+    {img: 'Instagram', text: 'Instagram'},
+    {img: 'Naver', text: 'Naver'},
+    {img: 'Poker', text: 'Poker'},
+    {img: 'React', text: 'React'},
+    {img: 'Horizon', text: 'Horizon'},
+    {img: 'Google', text: 'Google'},
+    {img: 'Call', text: 'Call'},
+    {img: 'In', text: 'Linkedin'},
+    {img: 'Massage', text: 'Facebook Massage'},
+    {img: 'Spotify', text: 'Spotify'},
+    {img: 'Devlog', text: 'Devlog'},
+    {img: 'Forder', text: 'Photo'},
+    {img: 'Forder', text: 'Game'},
+    {img: 'Forder', text: 'Porject'},
+    {img: 'Forder', text: 'ILikeBowling'},
+    {img: 'Forder', text: 'Download'},
+    {img: 'Forder', text: 'Music'},
+    {img: 'Forder', text: '3D Model'},
+    {img: 'Forder', text: 'C Drive'},
+]
+
+export const sort = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
