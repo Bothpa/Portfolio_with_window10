@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import OnOff from "../../../../Store/OnOff";
 
 const PoserOffMenuLineElement = ({ text, onClick, img }: { text: string, onClick: () => void, img: string }) => {
     return (
@@ -11,6 +12,7 @@ const PoserOffMenuLineElement = ({ text, onClick, img }: { text: string, onClick
 
 const PowerOffMenu = ({ PowerOffButtonRef, isPowerOffMenu, setPowerOffMenu }: { PowerOffButtonRef: React.RefObject<HTMLDivElement>, isPowerOffMenu: boolean, setPowerOffMenu: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const PowerOffMenuRef = useRef<HTMLDivElement>(null);
+    const { setIsBoot, setIsFullScreen, isBoot } = OnOff()
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -30,10 +32,20 @@ const PowerOffMenu = ({ PowerOffButtonRef, isPowerOffMenu, setPowerOffMenu }: { 
         };
     }, [setPowerOffMenu]);
 
+    const powerOffEvent = () => {
+        setTimeout(() => {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        }
+        setIsBoot(false);
+        setIsFullScreen(false);
+        }, 500);
+    }
+
     return (
         <div className={`${!isPowerOffMenu && 'hidden'} flex flex-col justify-center bg-[#222222] w-[255px] h-[115px] absolute bottom-full left-0`} ref={PowerOffMenuRef}>
             <PoserOffMenuLineElement text="절전" onClick={() => { }} img="SleepMode.png" />
-            <PoserOffMenuLineElement text="시스템 종료" onClick={() => { }} img="PowerV2.png" />
+            <PoserOffMenuLineElement text="시스템 종료" onClick={powerOffEvent} img="PowerV2.png" />
             <PoserOffMenuLineElement text="다시시작" onClick={() => { }} img="Reload.png" />
         </div>
     );

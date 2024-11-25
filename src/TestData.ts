@@ -23,6 +23,10 @@ export const ListData = [
     {img: 'Forder', text: 'Music'},
     {img: 'Forder', text: '3D Model'},
     {img: 'Forder', text: 'C Drive'},
+    {img: 'Twitter', text: 'Twitter'},
+    {img: 'Youtube', text: 'Youtube'},
+    {img: 'Facebook', text: 'Facebook'},
+    {img: 'Tiktok', text: 'Tiktok'},
 ]
 
 export const sort = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];

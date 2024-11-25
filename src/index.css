@@ -76,6 +76,15 @@ input:focus{
   background-color: #52595D70;
 }
 
+.Iconhover {
+  border : 1.5px solid #00000000;
+  box-sizing : border-box;
+}
+.Iconhover:hover {
+  background-color: #0E529920;
+  border : 1.5px solid #60676D70;
+}
+
 /* 버튼 디자인 출처 */
 /* https://inpa.tistory.com/entry/CSS-%F0%9F%92%8D-%EB%B2%84%ED%8A%BC-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%AA%A8%EC%9D%8C */
 .btn-3d {

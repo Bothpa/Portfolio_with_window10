@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import Booting from "./Booting/Booting";
 import Main from "./Main/Main";
+import OnOff from "./Store/OnOff";
 
 const App = () => {
-  const [isFullScreen, setFullScreen] = useState(false)
-  const [isBoot, setBoot] = useState(false)
+  // const [isFullScreen, setFullScreen] = useState(false)
+  // const [isBoot, setBoot] = useState(false)
+  const { setIsFullScreen, setIsBoot, isFullScreen, isBoot } = OnOff()
 
   const toggleFullScreen = () => {
     setTimeout(() => {
@@ -13,10 +15,10 @@ const App = () => {
       }  else {
        document.documentElement.requestFullscreen()
       }
-      setBoot(true)
+      setIsBoot(true)
       setTimeout(() => {
-        setBoot(false)
-        setFullScreen(true)
+        setIsBoot(false)
+        setIsFullScreen(true)
       }, 4000)
     }, 500)
   }
